@@ -6,7 +6,7 @@ tentativas = 0
 
 hist_pontuacao = []
 
-print("Jogo de adivinhação de número")
+print("Jogo de adivinhação de número entre 1 a 100")
 
 while True:
     num_adivinhado = input("Digite um número: ")
@@ -25,6 +25,10 @@ while True:
         print(f"Pontuação: {hist_pontuacao}, Tentativas: {tentativas}")
         break
     
+    elif tentativas == 10:
+        print(f'Acabaram as tentativas, o número era: {num_secreto}')
+        break
+    
     elif num_adivinhado != num_secreto:
         if num_adivinhado > num_secreto:
             print("Errado, o número é menor")
@@ -32,6 +36,7 @@ while True:
         elif num_adivinhado < num_secreto:
             print("Errado, o número é maior")
             
+    
     else:
         print("Invalido, tente novamente")
 
