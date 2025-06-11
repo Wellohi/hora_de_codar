@@ -7,4 +7,7 @@ def fatorial(n):
 num = int(input("Digite um numero inteiro: "))
 
 if num >= 0:
-    resultado = n
+    resultado = fatorial(num)
+    print(f'Fatorial de {num} é {resultado}')
+else:
+    print('Número inválido')
